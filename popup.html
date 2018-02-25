@@ -45,8 +45,14 @@
                 </div></a>
             </li>
             <li>
-                <a class = "nav-link"> <div class = "button1" id = "pref" style = "top: 12px; right: 12px" align = "center">
-                </div></a>
+                <a class = "nav-link"> <div class = "button1" id = "pref" onclick = "prefOpen()" style = "top: 12px; right: 12px" align = "center">
+                </div>
+		<script> 
+			function prefOpen() {
+				alert('clicked');
+			}
+		</script>
+		</a>
             </li>
 
 
@@ -79,6 +85,7 @@
     <script>
     var d = new Date();
     document.getElementById(d3).innerHTML = d.getDay();
+    alert(d.getDay());
     </script>
     <div class = "d4" id = "day4" style = "top: 20px" align = "center"> D
     </div></a>

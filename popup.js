@@ -33,31 +33,36 @@ function getCurrentTabUrl(callback) {
     callback(url);
 });
 }
-const var apikey = '6b84a56c561b6aba70eb92a47c27452d';
-var x = document.getElementById("ua");
 
-function getLat(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude;
-}
-function getLong(position) {
-    x.innerHTML = "Longitude: " + position.coords.longitude;
-}
 
-function getJSON(url) {
-    var resp ;
-    var xmlHttp ;
-    resp  = '' ;
-    xmlHttp = new XMLHttpRequest();
-    if(xmlHttp != null)
-    {
-        xmlHttp.open( "GET", url, false );
-        xmlHttp.send( null );
-        resp = xmlHttp.responseText;
+window.onload = function onLoadFunctions() {
+    const var apikey = '6b84a56c561b6aba70eb92a47c27452d';
+    var x = document.getElementById("ua");
+    function getLat(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude;
     }
-    return resp ;
-}
+    function getLong(position) {
+        x.innerHTML = "Longitude: " + position.coords.longitude;
+    }
+    function getJSON(url) {
+        var resp ;
+        var xmlHttp ;
+        resp  = '' ;
+        xmlHttp = new XMLHttpRequest();
+        if(xmlHttp != null)
+        {
+            xmlHttp.open( "GET", url, false );
+            xmlHttp.send( null );
+            resp = xmlHttp.responseText;
+        }
+        return resp ;
+    }
+    function apparentTemp(daytemp, rhperc, windspd) {
+        var vp = (rhperc/100)*6.105*Math.Exp(17.27*daytemp/(237.7+daytemp));
+        var atemp = daytemp + 0.33*vp-0.7*windspd-4.0;
+        return atemp;
+    }
 
-function onLoadFunctions() {
     var apiCall = 'http://api.openweathermap.org/data/2.5/weather?lat=' + getLat() + '&lon=' + getLong() + '&appid=' + apikey;
     var apiCallForecast = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + getLat() + '&lon=' + getLong() + '&appid=' + apikey;
 
@@ -87,10 +92,6 @@ function onLoadFunctions() {
     dayfivetemp = daytwotemp/8;
 }
 
-function apparentTemp(daytemp, rhperc, windspd) {
-    var vp = (rhperc/100)*6.105*Math.Exp(17.27*daytemp/(237.7+daytemp));
-    var atemp = daytemp + 0.33*vp-0.7*windspd-4.0;
-    return atemp;
-}
+
 
 
