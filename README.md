@@ -10,7 +10,9 @@ A personalized open-source micro-weather chrome extension.
 
 # Build/Installation Instructions
 -clone the repository.
+
 -open extension in developer mode on Google Chrome.
+
 -Enable and use it as an extension. 
 
 
