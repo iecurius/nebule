@@ -36,10 +36,10 @@ a {
     height: 218px;
     background: rgb(100,149,237);
     margin-top: 30px;
-    border-right: 1px solid rgb(100,149,237);
-    border-top: 1px solid rgb(100,149,237);
-    border-left: 1px solid rgb(100,149,237);
-    border-bottom: 1px solid rgb(100,149,237);
+    border-right: 1px transparent;
+    border-top: 1px solid transparent
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     border-radius: 12px;
 }
 
@@ -49,10 +49,10 @@ a {
     background:  #cc004c;
     margin-top: 30px;
     margin-left: 5px;
-    border-right: 1px solid #cc004c;
-    border-top: 1px solid #cc004c;
-    border-left: 1px solid #cc004c;
-    border-bottom: 1px solid #cc004c;
+    border-right: 1px transparent;
+    border-top: 1px transparent
+    border-left: 1px transparent;
+    border-bottom: 1px transparent;
     border-radius: 12px;
 }
 .Rec3{
@@ -62,10 +62,10 @@ a {
     margin-right: 3px;
     background:  #cc004c;
     margin-left: 4px;
-    border-right: 1px solid #cc004c;
-    border-top: 1px solid #cc004c;
-    border-left: 1px solid #cc004c;
-    border-bottom: 1px solid #cc004c;
+    border-right: 1px transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     border-radius: 12px;
 }
 .Rec4{
@@ -75,10 +75,10 @@ a {
     margin-right: 1px;
     margin-top: 30px;
     margin-left: 1px;
-    border-left: 1px solid #cc004c;
-    border-right: 1px solid #cc004c;
-    border-top: 1px solid #cc004c;
-    border-bottom: 1px solid #cc004c;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     border-radius: 12px;
 }
 .Rec5{
@@ -87,10 +87,10 @@ a {
     background:  #cc004c;
     margin-top: 30px;
     margin-left: 2px;
-    border-right: 1px solid #cc004c;
-    border-top: 1px solid #cc004c;
-    border-left: 1px solid #cc004c;
-    border-bottom: 1px solid #cc004c;
+    border-right: 1px solid transparent;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     border-radius: 12px;
 }
 
@@ -199,29 +199,29 @@ a {
     position: absolute;
     top: 150px;
     left: 53px;
-    opacity: 0;
+
 }
 .rain2{
     position: absolute;
     top: 150px;
     left: 161px;
-    opacity: 0;
+
 }
 .rain3{
     position: absolute;
     top: 150px;
     left: 270px;
-    opacity: 0;
+
 }
 .rain4{
     position: absolute;
     top: 150px;
     left: 380px;
-    opacity: 0;
+
 }
 .rain5{
     position: absolute;
     top: 150px;
     left: 490px;
-    opacity: 0;
+
 }
