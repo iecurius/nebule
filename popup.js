@@ -36,7 +36,7 @@ function getCurrentTabUrl(callback) {
 
 
 window.onload = function onLoadFunctions() {
-    const var apikey = '6b84a56c561b6aba70eb92a47c27452d';
+    var apikey = '6b84a56c561b6aba70eb92a47c27452d';
     var x = document.getElementById("ua");
     function getLat(position) {
         x.innerHTML = "Latitude: " + position.coords.latitude;
