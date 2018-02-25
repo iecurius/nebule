@@ -17,4 +17,4 @@ A personalized open-source micro-weather chrome extension.
 
 
 # Contributor Guide
-
+[contributor guide](Contributoes.md)
