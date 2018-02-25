@@ -37,6 +37,7 @@ function getCurrentTabUrl(callback) {
 
 window.onload = function onLoadFunctions() {
     var apikey = '6b84a56c561b6aba70eb92a47c27452d';
+    var prefTemp = 291;
     function getJSON(url) {
         var resp ;
         var xmlHttp ;
@@ -54,6 +55,20 @@ window.onload = function onLoadFunctions() {
         var vp = (rhperc/100)*6.105*Math.Exp(17.27*daytemp/(237.7+daytemp));
         var atemp = daytemp + 0.33*vp-0.7*windspd-4.0;
         return atemp;
+    }
+    function colorFromTemp(temp) {
+        var r = 0, g = 128, b = 0;
+        var diff = temp - prefTemp;
+        if (diff > 0) {
+            r += diff*4;
+            g -= diff*4;
+        }
+        else {
+            b += diff*4;
+            g -= diff*4;
+        }
+        var color = "rgb(" + r + ", " + g + ", " + b + ")";
+        return color;
     }
 
     document.getElementById("pref").addEventListener("click", function(){
@@ -92,6 +107,12 @@ window.onload = function onLoadFunctions() {
         dayfivetemp += dataForecastArray[0][i].main.temp;
     }
     dayfivetemp = daytwotemp/8;
-    console.log()
+
+    document.getElementById("currday").style.color = colorFromTemp(currdaytemp);
+    document.getElementById("daytwo").style.color = colorFromTemp(daytwotemp);
+    document.getElementById("daythree").style.color = colorFromTemp(daythreetemp);
+    document.getElementById("dayfour").style.color = colorFromTemp(dayfourtemp);
+    document.getElementById("dayfive").style.color = colorFromTemp(dayfivetemp);
+
 }
 
