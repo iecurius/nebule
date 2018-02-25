@@ -7,9 +7,9 @@ A personalized open-source micro-weather chrome extension.
 -Automatically indicates if the average apparent temperature of the day is different from the user's preference. 
 
 # Build/Installation Instructions
--clone the repository
--open extension in developer mode on Google Chrome
--Enable and use it as an extension 
+-clone the repository.
+-open extension in developer mode on Google Chrome.
+-Enable and use it as an extension. 
 
 
 # Contributor Guide
