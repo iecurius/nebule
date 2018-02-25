@@ -36,6 +36,12 @@ function getCurrentTabUrl(callback) {
 
 
 window.onload = function onLoadFunctions() {
+    function change(){
+    document.getElementById("currday").style.borderLeft = "solid #000000";
+    document.getElementById("currday").style.borderRight = "black";
+    document.getElementById("currday").style.borderTop = "black";
+    document.getElementById("currday").style.borderBottom = "black";
+    }
     var apikey = '6b84a56c561b6aba70eb92a47c27452d';
     var prefTemp = 291;
     function getJSON(url) {
@@ -115,4 +121,3 @@ window.onload = function onLoadFunctions() {
     document.getElementById("dayfive").style.color = colorFromTemp(dayfivetemp);
 
 }
-

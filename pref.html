@@ -11,7 +11,6 @@
         margin:10px;
         white-space: nowrap;
     }
-
     input[type=number], select {
         position: relative;
         width: 100%;
@@ -36,11 +35,9 @@
         border-radius: 4px;
         cursor: pointer;
   }
-
   input[type=submit]:hover {
   background-color: rgb(118,23,206);
   }
-
   div {
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -68,11 +65,11 @@
            <span class="slider round"></span>
        </label>
        <div>
-         <form action="/action_page.php">
+         <form action = "begin-create-done.html" method = "get">
            <label for="fname"></label>
-           <input type="number" min="-10" max="120" id="fname"  placeholder="Enter the temperature">
+           <input type="number" min="-10" max="120" name = "temp"  placeholder="Enter the temperature">
            <input type="submit" value="Submit">
-         </form>
+            </form>
        </div>
    </body>
    </html>
