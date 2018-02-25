@@ -7,18 +7,18 @@
     <style type="text/css">
     body{
         width: 350px;
-        height: 150px;
+        height: 100px;
         margin:10px;
         white-space: nowrap;
     }
 
     input[type=number], select {
-        position: absolute;
-        top: 185px;
+        position: relative;
+
         left:240px;
-        width: 20%;
+        width: 100%;
         padding: 13px 22px;
-        margin: 8px 0;
+        margin: 0px -20px;
         display: inline-block;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -57,10 +57,10 @@
            <h1 id="prefmessage"> <span id= "fancy"> Enter your Preferred Temperature </span> </h1>
        </div>
        <div id="cel">
-           <h1> <span id="celsius"> °C </span> </h1>
+           <h1> <span id="celsius">C</span> </h1>
        </div>
        <div id="fah">
-           <h1> <span id="fahrenheit"> °F </span> </h1>
+           <h1> <span id="fahrenheit">F</span> </h1>
        </div>
 
        <!-- Rounded switch -->
