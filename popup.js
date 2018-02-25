@@ -43,7 +43,7 @@ window.onload = function onLoadFunctions() {
     document.getElementById("currday").style.borderBottom = "black";
     }
     var apikey = '6b84a56c561b6aba70eb92a47c27452d';
-    var prefTemp = 263;
+    var prefTemp = 295;
     function getJSON(url) {
         var resp ;
         var xmlHttp ;
