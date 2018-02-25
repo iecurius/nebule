@@ -43,6 +43,7 @@ window.onload = function onLoadFunctions() {
     document.getElementById("currday").style.borderBottom = "black";
     }
     var apikey = '6b84a56c561b6aba70eb92a47c27452d';
+    var prefTemp = 291;
     function getJSON(url) {
         var resp ;
         var xmlHttp ;
@@ -61,23 +62,28 @@ window.onload = function onLoadFunctions() {
         var atemp = daytemp + 0.33*vp-0.7*windspd-4.0;
         return atemp;
     }
+    function colorFromTemp(temp) {
+        var r = 0, g = 128, b = 0;
+        var diff = temp - prefTemp;
+        if (diff > 0) {
+            r += diff*4;
+            g -= diff*4;
+        }
+        else {
+            b += diff*4;
+            g -= diff*4;
+        }
+        var color = "rgb(" + r + ", " + g + ", " + b + ")";
+        return color;
+    }
+
     document.getElementById("pref").addEventListener("click", function(){
         chrome.windows.create({'url': 'pref.html', 'type': 'popup', height: 450, width: 650}, function(window) {
         });
     });
 
-<<<<<<< HEAD
-    var apiCall = 'http://api.openweathermap.org/data/2.5/weather?lat=' + getLat() + '&lon=' + getLong() + '&appid=' + apikey;
-    var apiCallForecast = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + getLat() + '&lon=' + getLong() + '&appid=' + apikey;
-
-    var data1 = getJSON(apiCall1);
-    var dataForecast = getJSON(apiCallForecast);
-    var tempinp = document.getElementsByName("temp")[0].value;
-    alert(tempinp);
-=======
     var apiCall = 'http://api.openweathermap.org/data/2.5/weather?lat=' + 40.11 + '&lon=' + 88.21 + '&appid=' + apikey;
     var apiCallForecast = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + 40.11 + '&lon=' + 88.21 + '&appid=' + apikey;
->>>>>>> 5f48027cd9f9e3b6b9092b6606ced074e6831db0
 
     var data2 = getJSON(apiCall);
     var data = JSON.parse(data2);
@@ -107,9 +113,11 @@ window.onload = function onLoadFunctions() {
         dayfivetemp += dataForecastArray[0][i].main.temp;
     }
     dayfivetemp = daytwotemp/8;
-    console.log()
-}
-<<<<<<< HEAD
-=======
 
->>>>>>> 5f48027cd9f9e3b6b9092b6606ced074e6831db0
+    document.getElementById("currday").style.color = colorFromTemp(currdaytemp);
+    document.getElementById("daytwo").style.color = colorFromTemp(daytwotemp);
+    document.getElementById("daythree").style.color = colorFromTemp(daythreetemp);
+    document.getElementById("dayfour").style.color = colorFromTemp(dayfourtemp);
+    document.getElementById("dayfive").style.color = colorFromTemp(dayfivetemp);
+
+}
