@@ -1,2 +1,2 @@
 # Nebule
-Your own personalized open-source micro-weather app.
+A personalized open-source micro-weather app.
