@@ -45,12 +45,10 @@ a {
 }
 
 .Rec1:hover{
-
     border-right: 55px solid rgb(190,0,60);
     border-top: 110px solid rgb(190,0,60);
     border-left: 55px solid rgb(190,0,60);
     border-bottom: 110px solid rgb(190,0,60);
-
 }
 .Rec2{
     width: 100;
