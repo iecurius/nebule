@@ -102,6 +102,56 @@ a {
     border-radius: 12px;
 }
 
+.d1{
+    color: black;
+    position: absolute;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+    color: #d3d3d3;
+    left: 80px;
+    top: 100px;
+
+}
+.d2{
+    color: black;
+    position: absolute;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+    color: #d3d3d3;
+    left: 190px;
+    top: 100px;
+
+}
+.d3{
+    color: black;
+    position: absolute;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+    color: #d3d3d3;
+    left: 300px;
+    top: 100px;
+
+}
+.d4{
+    color: black;
+    position: absolute;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+    color: #d3d3d3;
+    left: 415px;
+    top: 100px;
+
+}
+.d5{
+    color: black;
+    position: absolute;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+    color: #d3d3d3;
+    left: 525px;
+    top: 100px;
+
+}
 
 .button {
     background-color: #FFFFFF; /* White */
