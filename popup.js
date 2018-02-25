@@ -73,13 +73,39 @@ window.onload = function onLoadFunctions() {
             b += diff*4;
             g -= diff*4;
         }
-        var color = "rgb(" + r + ", " + g + ", " + b + ")";
-        return color;
+        if (r >= 255) {
+            r = 255;
+        }
+        else if (r <= 0) {
+            r = 0;
+        }
+        if (g >= 255) {
+            g = 255;
+        }
+        else if (g <= 0) {
+            g = 0;
+        }
+        if (b >= 255) {
+            b = 255;
+        }
+        else if (b <= 0) {
+            b = 0;
+        }
+        return rgb2hex(r,g,b);
+    }
+
+    function rgb2hex(red, green, blue) {
+        var rgb = blue | (green << 8) | (red << 16);
+        return '#' + (0x1000000 + rgb).toString(16).slice(1)
     }
 
     document.getElementById("pref").addEventListener("click", function(){
         chrome.windows.create({'url': 'pref.html', 'type': 'popup', height: 450, width: 650}, function(window) {
         });
+    });
+
+    document.getElementById("info").addEventListener("click", function(){
+        alert('Made with love by Kaushik, Kanav, and Saahil, at Hack Illinois 2018!')
     });
 
     var apiCall = 'http://api.openweathermap.org/data/2.5/weather?lat=' + 40.11 + '&lon=' + 88.21 + '&appid=' + apikey;
@@ -107,17 +133,23 @@ window.onload = function onLoadFunctions() {
     for (i = 15; i <= 22; i++){
         dayfourtemp += dataForecastArray[0][i].main.temp;
     }
-    dayfourtemp = daytwotemp/8;
+    dayfourtemp = dayfourtemp/8;
     var dayfivetemp = 0;
     for (i = 23; i <= 30; i++){
         dayfivetemp += dataForecastArray[0][i].main.temp;
     }
-    dayfivetemp = daytwotemp/8;
+    dayfivetemp = dayfivetemp/8;
 
-    document.getElementById("currday").style.color = colorFromTemp(currdaytemp);
-    document.getElementById("daytwo").style.color = colorFromTemp(daytwotemp);
-    document.getElementById("daythree").style.color = colorFromTemp(daythreetemp);
-    document.getElementById("dayfour").style.color = colorFromTemp(dayfourtemp);
-    document.getElementById("dayfive").style.color = colorFromTemp(dayfivetemp);
+    console.log(colorFromTemp(currdaytemp));
+    console.log(colorFromTemp(daytwotemp));
+    console.log(colorFromTemp(daythreetemp));
+    console.log(colorFromTemp(dayfourtemp));
+    console.log(colorFromTemp(dayfivetemp));
+
+    document.getElementById("currday").style.backgroundColor = colorFromTemp(currdaytemp);
+    document.getElementById("daytwo").style.backgroundColor = colorFromTemp(daytwotemp);
+    document.getElementById("daythree").style.backgroundColor = colorFromTemp(daythreetemp);
+    document.getElementById("dayfour").style.backgroundColor = colorFromTemp(dayfourtemp);
+    document.getElementById("dayfive").style.backgroundColor = colorFromTemp(dayfivetemp);
 
 }
