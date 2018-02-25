@@ -66,8 +66,28 @@ function onLoadFunctions() {
     var dataForecast = getJSON(apiCallForecast);
 
     var currdaytemp = data1.main.temp;
-    var daytwotemp = data.list[1].main.temp;
-    var daythreetemp = data.list[2].main.temp;
+    var daytwotemp = 0;
+    for (i = 1; i <= 7; i++){
+      daytwotemp += data.list[i].main.temp;
+    }
+    daytwotemp = daytwotemp/7;
+    var daythreetemp = 0;
+    for (i = 8; i <= 15; i++){
+        daythreetemp += data.list[i].main.temp;
+    }
+    daythreetemp = daythreetemp/8;
+    var dayfourtemp = 0;
+    for (i = 16; i <= 23; i++){
+        dayfourtemp += data.list[i].main.temp;
+    }
+    dayfourtemp = daytwotemp/8;
+    var dayfivetemp = 0;
+    for (i = 24; i <= 31; i++){
+        dayfivetemp += data.list[i].main.temp;
+    }
+    dayfivetemp = daytwotemp/8;
+
+
 }
 
 
