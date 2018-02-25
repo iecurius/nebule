@@ -199,29 +199,31 @@ a {
     position: absolute;
     top: 150px;
     left: 53px;
-
+    opacity = 0;
 }
 .rain2{
     position: absolute;
     top: 150px;
     left: 161px;
-
+    opacity = 0;
 }
 .rain3{
     position: absolute;
     top: 150px;
     left: 270px;
-
+    opacity = 0;
 }
 .rain4{
     position: absolute;
     top: 150px;
     left: 380px;
+    opacity = 0;
 
 }
 .rain5{
     position: absolute;
     top: 150px;
     left: 490px;
+
 
 }
