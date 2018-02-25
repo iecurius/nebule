@@ -1,2 +1,2 @@
-# nebule
-your own micro weather app.
+# Nebule
+Your own personalized open-source micro-weather app.
