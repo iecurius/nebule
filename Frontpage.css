@@ -124,6 +124,28 @@ a {
     cursor: pointer;
 }
 
+.button1 {
+    background: url(gear.png);
+    background-size: 22px 22px;
+    border: none;
+    color: #d3d3d3;
+    padding: 11px 11px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: 'Slabo';
+    font-weight: bold;
+    margin: 7px 5px;
+    border: 0px solid #d3d3d3;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    -moz-transition;
+    cursor: pointer;
+}
+
 
 .button:hover {
     background-color: #d3d3d3;
