@@ -9,10 +9,10 @@
     "default_icon": "logo1.png",
     "default_popup": "popup.html",
     "default_title": "Nebule Weather"
-
   },
   "permissions": [
     "This app requires your current location.",
-    "storage"
+    "storage",
+    "geolocation"
   ]
 }
