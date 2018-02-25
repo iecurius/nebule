@@ -12,7 +12,7 @@
         white-space: nowrap;
     }
 
-    input[type=text], select {
+    input[type=number], select {
         position: absolute;
         top: 185px;
         left:240px;
@@ -28,8 +28,8 @@
         width: 30%;
         position: absolute;
         top: 250px;
-        left: 250px;
-        background-color: #4CAF50;
+        left: 245px;
+        background-color: #8A2BE2;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
@@ -39,7 +39,7 @@
   }
 
   input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: rgb(118,23,206);
   }
 
   div {
@@ -71,7 +71,7 @@
        <div>
          <form action="/action_page.php">
            <label for="fname"></label>
-           <input type="text" id="fname"  placeholder="Enter the temperature">
+           <input type="number" min="-10" max="120" id="fname"  placeholder="Enter the temperature">
            <input type="submit" value="Submit">
          </form>
        </div>

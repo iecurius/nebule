@@ -37,18 +37,18 @@ a {
     background: #green;
     margin-top: 30px;
 
-    border-right: 55px solid rgb(204,0,76);
-    border-top: 110px solid rgb(204,0,76);
-    border-left: 55px solid rgb(204,0,76);
-    border-bottom: 110px solid rgb(204,0,76);
+    border-right: 55px solid rgb(100,149,237);
+    border-top: 110px solid rgb(100,149,237);
+    border-left: 55px solid rgb(100,149,237);
+    border-bottom: 110px solid rgb(100,149,237);
     border-radius: 12px;
 }
 
 .Rec1:hover{
-    border-right: 55px solid rgb(190,0,60);
-    border-top: 110px solid rgb(190,0,60);
-    border-left: 55px solid rgb(190,0,60);
-    border-bottom: 110px solid rgb(190,0,60);
+    border-right: 55px solid rgb(85,134,222);
+    border-top: 110px solid rgb(85,134,222);
+    border-left: 55px solid rgb(85,134,222);
+    border-bottom: 110px solid rgb(85,134,222);
 }
 .Rec2{
     width: 100;
@@ -101,6 +101,7 @@ a {
     border-bottom: 110px solid #cc004c;
     border-radius: 12px;
 }
+
 
 .button {
     background-color: #FFFFFF; /* White */
