@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="preferences.css">
+<head>
+    <meta charset="tuf-8">
+    <title>Preferences</title>
+    <style type="text/css">
+    body{
+        width: 350px;
+        height: 150px;
+        margin:10px;
+        white-space: nowrap;
+    }
+
+    input[type=text], select {
+        position: absolute;
+        top: 185px;
+        left:240px;
+        width: 20%;
+        padding: 13px 22px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type=submit] {
+        width: 30%;
+        position: absolute;
+        top: 250px;
+        left: 250px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+  background-color: #45a049;
+  }
+
+  div {
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  }
+  </style>
+    </style>
+    <script src="popup.js" ></script>
+    </head>
+
+    <body>
+    <div id="about">
+           <h1 id="prefmessage"> <span id= "fancy"> Enter your Preferred Temperature </span> </h1>
+       </div>
+       <div id="cel">
+           <h1> <span id="celsius"> °C </span> </h1>
+       </div>
+       <div id="fah">
+           <h1> <span id="fahrenheit"> °F </span> </h1>
+       </div>
+
+       <!-- Rounded switch -->
+       <label class="switch">
+           <input type="checkbox">
+           <span class="slider round"></span>
+       </label>
+       <div>
+         <form action="/action_page.php">
+           <label for="fname"></label>
+           <input type="text" id="fname"  placeholder="Enter the temperature">
+           <input type="submit" value="Submit">
+         </form>
+       </div>
+   </body>
+   </html>
+
+
+
+
+
+
+
+
+
+</html>
