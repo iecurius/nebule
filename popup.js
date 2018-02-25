@@ -1,4 +1,3 @@
-
 /**
  * Get the current URL.
  *
@@ -86,8 +85,10 @@ function onLoadFunctions() {
         dayfivetemp += data.list[i].main.temp;
     }
     dayfivetemp = daytwotemp/8;
-
-
+function apparantTemp(daytemp, rhperc, windspd) {
+    var vp = (rhperc/100)*6.105*Math.Exp(17.27*daytemp/(237.7+daytemp));
+    vat atemp = daytemp + 0.33*vp-0.7*windspd-4.0;
+    return atemp;
 }
 
-
+}
