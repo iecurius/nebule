@@ -63,6 +63,11 @@ window.onload = function onLoadFunctions() {
         return atemp;
     }
 
+    document.getElementById("pref").addEventListener("click", function(){
+        chrome.windows.create({'url': 'pref.html', 'type': 'popup'}, function(window) {
+        });
+    });
+
     var apiCall = 'http://api.openweathermap.org/data/2.5/weather?lat=' + getLat() + '&lon=' + getLong() + '&appid=' + apikey;
     var apiCallForecast = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + getLat() + '&lon=' + getLong() + '&appid=' + apikey;
 
