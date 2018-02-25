@@ -43,7 +43,7 @@ window.onload = function onLoadFunctions() {
     document.getElementById("currday").style.borderBottom = "black";
     }
     var apikey = '6b84a56c561b6aba70eb92a47c27452d';
-    var prefTemp = 291;
+    var prefTemp = 263;
     function getJSON(url) {
         var resp ;
         var xmlHttp ;
@@ -66,11 +66,19 @@ window.onload = function onLoadFunctions() {
         var r = 0, g = 128, b = 0;
         var diff = temp - prefTemp;
         if (diff > 0) {
-            r += diff*4;
+            r = 204;
+            g = 0;
+            b = 76;
+            r += diff*2;
+            b -= diff*4;
             g -= diff*4;
         }
         else {
-            b += diff*4;
+            b = 237;
+            r = 100;
+            g = 149;
+            b += diff*2;
+            r -= diff*4;
             g -= diff*4;
         }
         if (r >= 255) {
