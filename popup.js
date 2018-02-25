@@ -36,6 +36,12 @@ function getCurrentTabUrl(callback) {
 
 
 window.onload = function onLoadFunctions() {
+    function change(){
+    document.getElementById("currday").style.borderLeft = "solid #000000";
+    document.getElementById("currday").style.borderRight = "black";
+    document.getElementById("currday").style.borderTop = "black";
+    document.getElementById("currday").style.borderBottom = "black";
+    }
     var apikey = '6b84a56c561b6aba70eb92a47c27452d';
     var x = document.getElementById("ua");
     function getLat(position) {
@@ -62,7 +68,6 @@ window.onload = function onLoadFunctions() {
         var atemp = daytemp + 0.33*vp-0.7*windspd-4.0;
         return atemp;
     }
-
     document.getElementById("pref").addEventListener("click", function(){
         chrome.windows.create({'url': 'pref.html', 'type': 'popup', height: 450, width: 650}, function(window) {
         });
@@ -73,6 +78,8 @@ window.onload = function onLoadFunctions() {
 
     var data1 = getJSON(apiCall1);
     var dataForecast = getJSON(apiCallForecast);
+    var tempinp = document.getElementsByName("temp")[0].value;
+    alert(tempinp);
 
     var currdaytemp = data1.main.temp;
     var daytwotemp = 0;
@@ -96,7 +103,3 @@ window.onload = function onLoadFunctions() {
     }
     dayfivetemp = daytwotemp/8;
 }
-
-
-
-
