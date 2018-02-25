@@ -64,7 +64,7 @@ window.onload = function onLoadFunctions() {
     }
 
     document.getElementById("pref").addEventListener("click", function(){
-        chrome.windows.create({'url': 'pref.html', 'type': 'popup'}, function(window) {
+        chrome.windows.create({'url': 'pref.html', 'type': 'popup', height: 350, width:200}, function(window) {
         });
     });
 
