@@ -43,7 +43,8 @@ window.onload = function onLoadFunctions() {
     document.getElementById("currday").style.borderBottom = "black";
     }
     var apikey = '6b84a56c561b6aba70eb92a47c27452d';
-    var prefTemp = 295;
+    var prefFahrenheit = 40;
+    var prefTemp = (prefFahrenheit + 459.67)*5/9;
     function getJSON(url) {
         var resp ;
         var xmlHttp ;
@@ -113,7 +114,7 @@ window.onload = function onLoadFunctions() {
     });
 
     document.getElementById("info").addEventListener("click", function(){
-        alert('Made with love by Kaushik, Kanav, and Saahil, at Hack Illinois 2018!')
+        alert('Made with <3 by Kaushik, Kanav, and Saahil, at Hack Illinois 2018!')
     });
 
     var apiCall = 'http://api.openweathermap.org/data/2.5/weather?lat=' + 40.11 + '&lon=' + 88.21 + '&appid=' + apikey;
