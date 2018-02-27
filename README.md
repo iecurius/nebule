@@ -11,7 +11,7 @@ A personalized open-source micro-weather chrome extension.
 # Build/Installation Instructions
 -Clone the repository.
 
--Load extension in developer mode on Google Chrome (chrome://extensions).
+-Load the downloaded directory as an extension in developer mode on Google Chrome (chrome://extensions).
 
 -Enable and use it as an extension. 
 
